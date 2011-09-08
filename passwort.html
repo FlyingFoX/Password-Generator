@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="/jqueryui/css/cupertino/jquery-ui-1.8.16.custom.css">
+		<link rel="stylesheet" href="mystyle.css">
+		<script type="text/javascript" src="/flyingfox/jquery-1.6.2.js"></script>
+		<script type="text/javascript" src="/jqueryui/js/jquery-ui-1.8.16.custom.min.js"></script>
+		<script type="text/javascript" src="/flyingfox/password-finder/password-visuals.js"></script>
+		<script type="text/javascript" src="/flyingfox/password-finder/generator.js"></script>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>Passwort Generator</title>
+	</head>
+	<body>
+		<div id="header">
+			<h1>Willkommen beim Password Generator</h1>
+			<h3>Dieser Password Generator hilft Ihnen dabei einfach merkbare und kryptograpisch sichere Passwörter zu erstellen.</h3>
+		</div>
+		<ul id="menu">
+			<li ><a href="/flyingfox/password-finder/index.html">Willkommen</a></li>
+			<li ><a href="/flyingfox/password-finder/passwort.html">Neues Passwort generieren</a></li>
+			<li><a href="/flyingfox/password-finder/faq.html">Häufig gestellte Fragen (FAQ)</a></li>
+		</ul>
+		<div id="body" border="5px solid red">
+			<div id="instruction">
+				Es werden zufällige Daten benötigt, um das Passwort zu erstellen.<br>
+				Bitte holen Sie einen sechsseitigen Würfel und tragen Sie die gewürfelten Zahlen in das Würfel Feld ein.<br>
+			</div>
+			<form id="dice-form">
+				<label for="dice-thrown">Gewürfelt:<br>
+				<input id="dice-thrown" name="dice-thrown" type="number">
+				<input class="LCD" type="text" readonly="readonly" id="thrown"><span class="LCD">/</span>
+				<input class="LCD" type="text" readonly="readonly" id="needed">
+				<div>
+					<div id="progress"></div> 
+				</div>
+				<button type="button" value=10 class="debug-progress">Set progress to 10</button>
+				<button type="button" value=50 class="debug-progress">Set progress to 50</button>
+				<button type="button" value=90 class="debug-progress">Set progress to 90</button>
+			</form>
+		</div>
+		<div id="debug" class="ui-widget-content ui-widget">
+			<h3 class="ui-widget-header">Debug Text</h3>
+		</div>
+		<div id="footer">
+			<!--[if IE]>This page is best viewed with a webbrowser. Get one today!<![endif]-->
+		</div>
+	</body>
+</html>
+	

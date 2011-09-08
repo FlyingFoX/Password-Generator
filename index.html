@@ -5,49 +5,57 @@
 		<link rel="stylesheet" href="/jqueryui/css/cupertino/jquery-ui-1.8.16.custom.css">
 		<link rel="stylesheet" href="mystyle.css">
 		<script type="text/javascript" src="/flyingfox/jquery-1.6.2.js"></script>
-		<script type="text/javascript" src="/flyingfox/password-finder/visuals.js"></script>
-		<script type="text/javascript" src="/flyingfox/password-finder/generator.js"></script>
 		<script type="text/javascript" src="/jqueryui/js/jquery-ui-1.8.16.custom.min.js"></script>
+		<script type="text/javascript" src="/flyingfox/password-finder/visuals.js"></script>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<title>Passwort Generator</title>
 	</head>
-	<body>
-		<h1>Willkommen beim Password Generator</h1>
-		<h3>Dieser Password Generator hilft Ihnen dabei einfach merkbare und kryptograpisch sichere Passwörter zu erstellen.</h3>
-		<form>
-			<fieldset>
-				<legend>Wählen Sie aus welche Sicherheitsstufe Ihr Passwort haben soll</legend>
-				<input type="radio" name="security" id="security-low" value="low" checked />
-				<label for="security-low">Einfach und kurz</label> <br />
-				<input type="radio" name="security" id="security-high" value="high" />
-				<label for="security-high">In absehbarer Zeit unknackbar</label> <br />
-				<p>Es wird empfohlen das generierte Passwort nur für die folgenden Dienste zu verwenden:</p>
-				<div id="usability-security-low">
-					<ul>
-						<li>Webseiten auf denen Sie <i>nicht</i> ihren Namen angeben</li>
-						<li>Webseiten ohne Bezug zu Ihrem Geld</li>
-						<li>Online Spiele</li>
-					</ul>
-				</div>
-				<div id="usability-security-high" >
-					Dieses Passwort ist für alle Dienste geeignet. Sie sollten es aber nicht für mehr als einen der unten aufgeführten Dienste verwenden.
-					Für die folgenden Dienste sollte möglichst kein schwächeres Passwort gewählt werden.
-					<ul>
-						<li>E-Mail</li>
-						<li>Online Shops</li>
-						<li>Online Banking</li>
-						<li>Soziale Netzwerke wie Facebook, Google+, StudiVZ, MeinVZ, Xing, etc.</li>
-					</ul>
-				</div>
-				<button name="start-generation" type="button">Neues Passwort generieren</button>
-			</fieldset>
-		</form>
-
-		<div id="debug" class="ui-widget-content">
-			<h3 class="ui-widget-header">Debug Text</h3>
+	<body class="ui-widget" >
+		<div id="header">
+			<h1>Willkommen beim Password Generator</h1>
+			<h3>Dieser Password Generator hilft Ihnen dabei einfach merkbare und kryptograpisch sichere Passwörter zu erstellen.</h3>
 		</div>
-		<div id="passwords-data"></div>
-		<div class="footer">
+		<ul id="menu">
+			<li ><a href="/flyingfox/password-finder/index.html">Willkommen</a></li>
+			<li ><a href="/flyingfox/password-finder/passwort.html">Neues Passwort generieren</a></li>
+			<li><a href="/flyingfox/password-finder/faq.html">Häufig gestellte Fragen (FAQ)</a></li>
+		</ul>
+		<div id="body">
+			<form id="security-form" class="ui-widget ui-widget-content" action="/flyingfox/password-finder/passwort.html">
+				<fieldset>
+					<legend>Wählen Sie aus welche Sicherheitsstufe Ihr Passwort haben soll</legend>
+					<input type="radio" name="security" id="security-low" value="low" checked />
+					<label for="security-low">Einfach und kurz</label> <br />
+					<input type="radio" name="security" id="security-high" value="high" />
+					<label for="security-high">In absehbarer Zeit unknackbar</label> <br />
+					<p>Es wird empfohlen das generierte Passwort nur für die folgenden Dienste zu verwenden:</p>
+					<div id="usability-security-low">
+						<ul>
+							<li>Webseiten auf denen Sie <i>nicht</i> ihren Namen angeben</li>
+							<li>Webseiten ohne Bezug zu Ihrem Geld</li>
+							<li>Online Spiele</li>
+						</ul>
+					</div>
+					<div id="usability-security-high" >
+						Dieses Passwort ist für alle Dienste geeignet. Sie sollten es aber nicht für mehr als einen der unten aufgeführten Dienste verwenden.
+						Für die folgenden Dienste sollte möglichst kein schwächeres Passwort gewählt werden.
+						<ul>
+							<li>E-Mail</li>
+							<li>Online Shops</li>
+							<li>Online Banking</li>
+							<li>Soziale Netzwerke wie Facebook, Google+, StudiVZ, MeinVZ, Xing, etc.</li>
+						</ul>
+					</div>
+					<button  id="start-generation" type="submit">Neues Passwort generieren</button>
+				</fieldset>
+			</form>
+
+			<div id="debug" class="ui-widget-content ui-widget">
+				<h3 class="ui-widget-header">Debug Text</h3>
+			</div>
+			<div id="passwords-data"></div>
+		</div>
+		<div id="footer">
 			<!--[if IE]>This page is best viewed with a webbrowser. Get one today!<![endif]-->
 		</div>
 	</body>

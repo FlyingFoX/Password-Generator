@@ -5,4 +5,28 @@
 	width:500px; 
 	left:900px; 
 	top:135px;
+	opacity: 0.5;
 }
+#menu
+{
+	height: 100%;
+	width: 260;
+}
+.LCD
+{
+	width: 2em;
+	height: 2em;
+	font-weight: bold;
+	font-size: 1em;
+	text-align: center;
+}
+#progress
+{
+	width: 80%;
+	float: right;
+}
+.finished
+{
+	background-color: chartreuse;
+}
+	
