@@ -10,7 +10,7 @@
 #menu
 {
 	height: 100%;
-	width: 260;
+	width: 260px;
 }
 .LCD
 {
@@ -22,11 +22,14 @@
 }
 #progress
 {
-	width: 80%;
-	float: right;
+	margin: 10px;
+	float: left;
 }
 .finished
 {
-	background-color: chartreuse;
+	color: green;
 }
-	
+#body
+{
+	margin-left: 270px;
+}

@@ -21,23 +21,19 @@
 			<li ><a href="/flyingfox/password-finder/passwort.html">Neues Passwort generieren</a></li>
 			<li><a href="/flyingfox/password-finder/faq.html">Häufig gestellte Fragen (FAQ)</a></li>
 		</ul>
-		<div id="body" border="5px solid red">
+		<div id="body">
 			<div id="instruction">
 				Es werden zufällige Daten benötigt, um das Passwort zu erstellen.<br>
 				Bitte holen Sie einen sechsseitigen Würfel und tragen Sie die gewürfelten Zahlen in das Würfel Feld ein.<br>
 			</div>
 			<form id="dice-form">
-				<label for="dice-thrown">Gewürfelt:<br>
-				<input id="dice-thrown" name="dice-thrown" type="number">
+				<label for="dice-thrown">Gewürfelt:<br></label>
+				<input id="dice-thrown" name="dice-thrown" type="text">
 				<input class="LCD" type="text" readonly="readonly" id="thrown"><span class="LCD">/</span>
 				<input class="LCD" type="text" readonly="readonly" id="needed">
-				<div>
-					<div id="progress"></div> 
-				</div>
-				<button type="button" value=10 class="debug-progress">Set progress to 10</button>
-				<button type="button" value=50 class="debug-progress">Set progress to 50</button>
-				<button type="button" value=90 class="debug-progress">Set progress to 90</button>
+				<div id="progress"></div> 
 			</form>
+			<div id="newpassword">Ihr neues Passwort ist: <input type="text" readonly="readonly" /></div>
 		</div>
 		<div id="debug" class="ui-widget-content ui-widget">
 			<h3 class="ui-widget-header">Debug Text</h3>
