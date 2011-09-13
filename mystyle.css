@@ -23,7 +23,6 @@
 #progress
 {
 	margin: 10px;
-	float: left;
 }
 .finished
 {
@@ -31,5 +30,15 @@
 }
 #body
 {
+	border-style: solid none none solid;
+	border-color: grey;
+	border-width: 2px;
 	margin-left: 270px;
+	padding: 10px;
+}
+.dialog
+{
+	display:none;
+	backgroud-color: #F6E69F;
+	border: 1px solid #C0C0C0;
 }
