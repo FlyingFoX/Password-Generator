@@ -41,7 +41,7 @@
 }
 
 /*	all corners round	*/
-#menu a:hover, #menu a:active, .button:hover, .button:active, .dialog
+#menu a, .button, .dialog, #header
 {
 	border-bottom-right-radius: 6px;
 	border-bottom-left-radius: 6px;
