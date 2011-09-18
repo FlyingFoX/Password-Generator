@@ -110,3 +110,17 @@
 	background-color: gold;
 	border: 1px solid #C0C0C0;
 }
+
+/*mainly for security.html */
+.three-dice>td:nth-child(4)
+{
+	background-color:#E8FFD2;
+}
+.four-dice>td:nth-child(4)
+{
+	background-color:#D2FFA5;
+}
+.five-dice>td:nth-child(4)
+{
+	background-color:#A5FF4B;
+}
