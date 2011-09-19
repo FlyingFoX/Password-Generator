@@ -12,6 +12,7 @@ $(document).ready(function() {
 			complete: progressFinished
 	});
 	$("#dice-thrown").bind("keyup", setProgress);
+	$("#dice-thrown").change(setProgress);
 	reset();
 });
 function toggleInfo(){
@@ -71,11 +72,25 @@ function progressFinished(){
 	}
 }
 
+function check_password(password){
+	if ( input_ready && Math.pow(26, password.length) < Math.pow(7776, Math.floor(NEEDED_DICE/5))  ){
+		$("#too-short").dialog({
+			position:"center", 
+			buttons: { "Ok": function() { $(this).dialog("close"); } }
+		});
+		reset();
+		return false;
+	}
+	return true;
+}
+
 function set_password(password){
-	$("#newpassword input").val(password);
-	//only highlight if the password has been set
-	if ( password != "" && password != null){
-		$("#newpassword").show("highlight", {}, 2000);
+	if (check_password(password) ){
+		$("#newpassword input").val(password);
+		//only highlight if the password has been set
+		if ( password != "" && password != null){
+			$("#newpassword").show("highlight", {}, 2000);
+		}
 	}
 }
 
