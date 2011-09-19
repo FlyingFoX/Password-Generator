@@ -21,6 +21,12 @@
 	border-width: 1px;
 }
 
+#footer
+{
+	border-top: 2px dotted grey;
+	text-align: center; 
+}
+
 /*	white font	*/
 #menu a:hover,#menu a:active, .button:hover, .button:active
 {
@@ -85,6 +91,21 @@
 	margin-left: 270px;
 	padding: 10px;
 }
+
+.dialog
+{
+	display: inline-block;
+	border: 1px solid #C0C0C0;
+	padding: 5px;
+	margin: 10px;
+}
+.information
+{
+	background-color: gold;
+	border: 1px solid #C0C0C0;
+}
+
+/* mainly for password.html */
 #security-form input, #security-form label, #security-form .ui-icon
 {
 	float: left;
@@ -98,15 +119,27 @@
 {
 	background-color: #F6E69F;
 }
-.dialog
+
+/*mainly for security.html */
+.three-dice>td:nth-child(4)
 {
-	display: inline-block;
-	border: 1px solid #C0C0C0;
-	padding: 5px;
-	margin: 10px;
+	background-color:#E8FFD2;
 }
-.information
+.four-dice>td:nth-child(4)
 {
-	background-color: gold;
-	border: 1px solid #C0C0C0;
+	background-color:#D2FFA5;
+}
+.five-dice>td:nth-child(4)
+{
+	background-color:#A5FF4B;
+}
+
+/* language specific stuff */
+:lang(de)
+{ 
+	quotes:"\201E" "\201C" "\201A" "\2018";
+}
+:lang(en)    
+{ 
+	quotes:"\201C" "\201D" "\2018" "\2019"; 
 }
