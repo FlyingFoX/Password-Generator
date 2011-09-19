@@ -1,6 +1,6 @@
 var password_hash = {};
 var hash_ready = false;
-jQuery.getJSON("/flyingfox/password-finder/diceware_german_hash.json", function(password_data){
+jQuery.getJSON("diceware_german_hash.json", function(password_data){
 	password_hash = password_data;
 	hash_ready = true;
 	set_password( find_password() );
