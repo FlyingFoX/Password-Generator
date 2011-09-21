@@ -18,7 +18,7 @@
 
 	border-style: solid;
 	border-color: white;
-	border-width: 1px;
+	border-width: 1px;	
 }
 
 #footer
@@ -118,6 +118,14 @@
 .input-error .error
 {
 	background-color: #F6E69F;
+}
+#dice-thrown
+{
+	background-color: lightYellow;
+}
+#newpassword
+{
+	margin: 10px 0px;
 }
 
 /*mainly for security.html */

@@ -7,10 +7,6 @@ $(document).ready(function() {
 	$(".dialog").hide();
 	$("#security-info").click(toggleInfo);
 	$("#security-form input").change(adjustSecurity);
-	$("#progress").progressbar({
-			value: 0,
-			complete: progressFinished
-	});
 	$("#dice-thrown").bind("keyup", setProgress);
 	$("#dice-thrown").change(setProgress);
 	$("#reset").click(reset);
@@ -40,8 +36,8 @@ function adjustSecurity() {
 		//something is already shown
 		var duration = "slow";
 		if ( $(":checked[name='security']").val() == "low" ) {
-			$("#usability-security-low").show();
 			$("#usability-security-high").hide();
+			$("#usability-security-low").show();
 			$("#usability-security-low").effect("highlight", {}, duration);
 		} else if ( $(":checked[name='security']").val() == "high" ) {
 			$("#usability-security-low").hide();
@@ -66,19 +62,11 @@ function reset(){
 	setProgress();
 }
 
-function progressFinished(){
-	if (validate_dice_thrown()){
-		$(".LCD").addClass("finished");
-		input_ready = true;
-		set_password( find_password($("#dice-thrown").val()) );
-	}
-}
-
 function check_password(password){
 	if ( input_ready && Math.pow(26, password.length) < Math.pow(7776, Math.floor(NEEDED_DICE/5))  ){
 		$("#too-short").dialog({
 			position:"center", 
-			buttons: { "Ok": function() { $(this).dialog("close"); } }
+			buttons: { "OK": function() { $(this).dialog("close"); } }
 		});
 		reset();
 		return false;
@@ -87,12 +75,17 @@ function check_password(password){
 }
 
 function set_password(password){
-	if (check_password(password) ){
+	// only set the password if it is valid and non empty
+	if (check_password(password) 
+			&& password != "" && password != null ){
+		var oldpassword = $("#newpassword input").val();
 		$("#newpassword input").val(password);
-		//only highlight if the password has been set
-		if ( password != "" && password != null){
+		// only highlight if the password changed
+		if (oldpassword != password ){
 			$("#newpassword").show("highlight", {}, 2000);
 		}
+	}else{
+		$("#newpassword input").val("");
 	}
 }
 
@@ -108,19 +101,18 @@ function validate_dice_thrown(){
 
 function setProgress(event){
 	var progress = $("#dice-thrown").val().length;
-	var completion = progress / NEEDED_DICE * 100.0;
 	$("#thrown").val(progress);
-	if ( progress != NEEDED_DICE ){
-		$(".LCD").removeClass("finished");
-	}
-	$("#progress").progressbar("value", completion );
 	// don't do any validation when backspace was pressed.
 	if ( event != null && event.which == 8){
 		$(".LCD").removeClass("finished");
-		
 		input_ready = false;
 		return;
 	}else {
-		validate_dice_thrown();
+		var valid = validate_dice_thrown();
+		if (valid && progress == NEEDED_DICE ){
+			$(".LCD").addClass("finished");
+			input_ready = true;
+			set_password( find_password($("#dice-thrown").val()) );
+		}
 	}
 }
