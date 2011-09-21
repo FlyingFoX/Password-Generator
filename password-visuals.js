@@ -13,6 +13,7 @@ $(document).ready(function() {
 	});
 	$("#dice-thrown").bind("keyup", setProgress);
 	$("#dice-thrown").change(setProgress);
+	$("#reset").click(reset);
 	reset();
 });
 function toggleInfo(){
@@ -60,6 +61,7 @@ function set_needed_dice(dice){
 function reset(){
 	$("#dice-thrown").val("");
 	$("#newpassword input").val("");
+	$(".LCD").removeClass("finished");
 	set_needed_dice(NEEDED_DICE);
 	setProgress();
 }
@@ -108,14 +110,17 @@ function setProgress(event){
 	var progress = $("#dice-thrown").val().length;
 	var completion = progress / NEEDED_DICE * 100.0;
 	$("#thrown").val(progress);
-	// don't do any validation when backspace was pressed.
-	if ( event != null && event.which == 8){
-		return;
-	}else {
-		validate_dice_thrown();
-	}
 	if ( progress != NEEDED_DICE ){
 		$(".LCD").removeClass("finished");
 	}
 	$("#progress").progressbar("value", completion );
+	// don't do any validation when backspace was pressed.
+	if ( event != null && event.which == 8){
+		$(".LCD").removeClass("finished");
+		
+		input_ready = false;
+		return;
+	}else {
+		validate_dice_thrown();
+	}
 }
