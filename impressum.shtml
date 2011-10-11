@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<!--#include virtual="standard-head.html" -->
+	</head>
+	<body class="ui-widget" >
+		<!--#include virtual="header.html" -->
+		<!--#set var="current-file" value="impressum.shtml" -->
+		<!--#include virtual="menu.shtml" -->
+		<div id="body">	
+			<!-- CONTENT GOES HERE! -->
+			<h1>Impressum</h1>		
+			<address>
+			Matthias Fritsche<br>
+			Rütscherstraße 165<br>
+			52072 Aachen<br>
+			</address>
+		</div>
+		<!--#include virtual="footer.html" -->
+	</body>
+</html>
