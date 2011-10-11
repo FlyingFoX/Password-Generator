@@ -1,21 +1,21 @@
 <ul id="menu">
 	<li ><a href="index.shtml" 
-		<!--#if expr="${current-file} == 'index.shtml'" -->
+		<!--#if expr="${DOCUMENT_NAME} == 'index.shtml'" -->
 		class="ui-state-active ui-state-default"
 		<!--#endif -->
 		>Startseite</a></li>
 	<li ><a href="password.shtml"
-		<!--#if expr="${current-file} == 'password.shtml'" -->
+		<!--#if expr="${DOCUMENT_NAME} == 'password.shtml'" -->
 		class="ui-state-active ui-state-default"
 		<!--#endif -->
 		>Neues Passwort erstellen</a></li>
 	<li><a href="security.shtml"
-		<!--#if expr="${current-file} == 'security.shtml'" -->
+		<!--#if expr="${DOCUMENT_NAME} == 'security.shtml'" -->
 		class="ui-state-active ui-state-default"
 		<!--#endif -->
 		>Sicherheit</a></li>
 	<li><a href="impressum.shtml"
-		<!--#if expr="${current-file} == 'impressum.shtml'" -->
+		<!--#if expr="${DOCUMENT_NAME} == 'impressum.shtml'" -->
 		class="ui-state-active ui-state-default"
 		<!--#endif -->
 		>Impressum</a></li>

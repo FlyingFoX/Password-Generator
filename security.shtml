@@ -4,7 +4,6 @@
 	<!--#include virtual="head.shtml" -->
 	<body class="ui-widget" >
 		<!--#include virtual="header.html" -->
-		<!--#set var="current-file" value="security.shtml" -->
 		<!--#include virtual="menu.shtml" -->
 		<div id="body">
 			<div class="question">
