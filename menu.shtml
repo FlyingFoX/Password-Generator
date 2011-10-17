@@ -14,9 +14,9 @@
 		class="ui-state-active ui-state-default"
 		<!--#endif -->
 		>Sicherheit</a></li>
-	<li><a href="impressum.shtml"
-		<!--#if expr="${DOCUMENT_NAME} == 'impressum.shtml'" -->
+	<li><a href="credits.shtml"
+		<!--#if expr="${DOCUMENT_NAME} == 'credits.shtml'" -->
 		class="ui-state-active ui-state-default"
 		<!--#endif -->
-		>Impressum</a></li>
+		>Quellen</a></li>
 </ul>
