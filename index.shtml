@@ -4,7 +4,7 @@
 <!--#include virtual="${lang}/default.shtml" -->
 <html>
 	<head>
-		<!--#include virtual="standard-head.html" -->
+		<!--#include virtual="standard-head.shtml" -->
 		<script type="text/javascript" src="visuals.js"></script>
 	</head>
 	<body class="ui-widget" >

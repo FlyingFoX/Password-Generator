@@ -1,5 +1,4 @@
 <ul id="menu">
-	<!--#include virtual="${lang}/menu.shtml" -->
 	<li ><a href="index.shtml" 
 		<!--#if expr="${DOCUMENT_NAME} == 'index.shtml'" -->
 		class="ui-state-active ui-state-default"
