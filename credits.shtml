@@ -7,12 +7,7 @@
 	<body class="ui-widget" >
 		<!--#include virtual="header.html" -->
 		<!--#include virtual="menu.shtml" -->
-		<div id="body">	
-			<h2>Quellen</h2>
-			<ul>
-				<li>Idee zu diesem Projekt von <a href="http://world.std.com/~reinhold/diceware.html">The Diceware Passphrase</a></li>
-				<li><a href="diceware_german.txt">Deutsche Wortliste</a> von Benjamin Tenne unter der <a href="http://www.gnu.org/licenses/">GPL</a></li>
-		</div>
+		<!--#include virtual="include-body.shtml" -->
 		<!--#include virtual="footer.html" -->
 	</body>
 </html>

@@ -1,0 +1,7 @@
+
+		<!--#if expr="${QUERY_STRING} = /lang=([a-zA-Z]{2})/" -->
+			<!--#set var="lang" value="$1" -->
+		<!--#else -->
+			<!--#set var="lang" value="de" -->
+		<!--#endif -->
+		<!--#include virtual="${lang}/${DOCUMENT_NAME}" -->

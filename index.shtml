@@ -8,14 +8,7 @@
 	<body class="ui-widget" >
 		<!--#include virtual="header.html" -->
 		<!--#include virtual="menu.shtml" -->
-		<div id="body">
-			<p id="about">Dieser Passwort Generator hilft Ihnen sichere und einfach merkbare Passwörter zu erstellen. Dies wird dadurch erreicht, dass die erstellten Passwörter alle aus Worten oder einfachen Zeichenkombinationen bestehen. Ein typisches Passwort könnte z.B. so aussehen: <pre>
-wein docht aber
-</pre>		</p>
-			<a href="password.shtml" class="button" id="generate-password">Passwort erstellen</a>
-			
-			
-		</div>
+		<!--#include virtual="include-body.shtml" -->
 		<!--#include virtual="footer.html" -->
 	</body>
 </html>
