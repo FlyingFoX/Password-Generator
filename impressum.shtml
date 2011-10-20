@@ -17,6 +17,6 @@
 			<p>PGP Key: C84E0B1548488D3D<br>
 			PGP Fingerprint: 5715 543D 532B BF69 3BA6 17A7 C84E 0B15 4848 8D3D<br></p>
 		</div>
-		<!--#include virtual="footer.html" -->
+		<!--#include virtual="footer.shtml" -->
 	</body>
 </html>

@@ -1,13 +1,14 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
+<!--#include virtual="decide-lang.shtml" -->
 <html>
 	<head>
 		<!--#include virtual="standard-head.html" -->
 	</head>
 	<body class="ui-widget" >
-		<!--#include virtual="header.html" -->
+		<!--#include virtual="header.shtml" -->
 		<!--#include virtual="menu.shtml" -->
 		<!--#include virtual="include-body.shtml" -->
-		<!--#include virtual="footer.html" -->
+		<!--#include virtual="footer.shtml" -->
 	</body>
 </html>

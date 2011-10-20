@@ -1,22 +1,24 @@
 <ul id="menu">
+	<!--#include virtual="${lang}/menu.shtml" -->
 	<li ><a href="index.shtml" 
 		<!--#if expr="${DOCUMENT_NAME} == 'index.shtml'" -->
 		class="ui-state-active ui-state-default"
 		<!--#endif -->
-		>Startseite</a></li>
+		><!--#echo var="home" -->
+		</a></li>
 	<li ><a href="password.shtml"
 		<!--#if expr="${DOCUMENT_NAME} == 'password.shtml'" -->
 		class="ui-state-active ui-state-default"
 		<!--#endif -->
-		>Neues Passwort erstellen</a></li>
+		><!--#echo var="new_password" --></a></li>
 	<li><a href="security.shtml"
 		<!--#if expr="${DOCUMENT_NAME} == 'security.shtml'" -->
 		class="ui-state-active ui-state-default"
 		<!--#endif -->
-		>Sicherheit</a></li>
+		><!--#echo var="security" --></a></li>
 	<li><a href="credits.shtml"
 		<!--#if expr="${DOCUMENT_NAME} == 'credits.shtml'" -->
 		class="ui-state-active ui-state-default"
 		<!--#endif -->
-		>Quellen</a></li>
+		><!--#echo var="credits" --></a></li>
 </ul>

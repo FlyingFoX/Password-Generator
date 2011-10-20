@@ -3,9 +3,9 @@
 <html>
 	<!--#include virtual="head.shtml" -->
 	<body class="ui-widget" >
-		<!--#include virtual="header.html" -->
+		<!--#include virtual="header.shtml" -->
 		<!--#include virtual="menu.shtml" -->
 		<!--#include virtual="include-body.shtml" -->
-		<!--#include virtual="footer.html" -->
+		<!--#include virtual="footer.shtml" -->
 	</body>
 </html>
