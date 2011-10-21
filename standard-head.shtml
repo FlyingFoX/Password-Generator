@@ -6,5 +6,5 @@
 		<meta name="author" content="Matthias Fritsche">
 		<meta name="description" lang="de" content="Mit diesem Passwort Generator können Sie einfach merkbare und sichere Passwört erstellen.">
 		<meta name="keywords" lang="de" content="Passwort, erstellen, generieren, methode, kryptograpisch, sicher, einfach, merkbar">
-		<meta http-equiv="content-language" content="de">
-		<title>FlyingFox&#8217; Passwort Generator</title>
+		<meta http-equiv="content-language" content="<!--#echo var="lang" -->">
+		<title><!--#echo var="title" --></title>

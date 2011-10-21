@@ -1,21 +1,16 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
+<!--#include virtual="decide-lang.shtml" -->
+<!--#include virtual="${lang}/default.shtml" -->
 <html>
 	<head>
-		<!--#include virtual="standard-head.html" -->
+		<!--#include virtual="standard-head.shtml" -->
 		<script type="text/javascript" src="visuals.js"></script>
 	</head>
 	<body class="ui-widget" >
-		<!--#include virtual="header.html" -->
+		<!--#include virtual="header.shtml" -->
 		<!--#include virtual="menu.shtml" -->
-		<div id="body">
-			<p id="about">Dieser Passwort Generator hilft Ihnen sichere und einfach merkbare Passwörter zu erstellen. Dies wird dadurch erreicht, dass die erstellten Passwörter alle aus Worten oder einfachen Zeichenkombinationen bestehen. Ein typisches Passwort könnte z.B. so aussehen: <pre>
-wein docht aber
-</pre>		</p>
-			<a href="password.shtml" class="button" id="generate-password">Passwort erstellen</a>
-			
-			
-		</div>
-		<!--#include virtual="footer.html" -->
+		<!--#include virtual="include-body.shtml" -->
+		<!--#include virtual="footer.shtml" -->
 	</body>
 </html>

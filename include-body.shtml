@@ -1,0 +1,3 @@
+
+		<!--#include virtual="decide-lang.shtml" -->
+		<!--#include virtual="${lang}/${DOCUMENT_NAME}" -->

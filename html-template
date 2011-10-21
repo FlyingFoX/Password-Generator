@@ -11,6 +11,6 @@
 			<!-- CONTENT GOES HERE! -->		
 		
 		</div>
-		<!--#include virtual="footer.html" -->
+		<!--#include virtual="footer.shtml" -->
 	</body>
 </html>

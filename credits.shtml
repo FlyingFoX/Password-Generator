@@ -1,18 +1,15 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
+<!--#include virtual="decide-lang.shtml" -->
+<!--#include virtual="${lang}/default.shtml" -->
 <html>
 	<head>
-		<!--#include virtual="standard-head.html" -->
+		<!--#include virtual="standard-head.shtml" -->
 	</head>
 	<body class="ui-widget" >
-		<!--#include virtual="header.html" -->
+		<!--#include virtual="header.shtml" -->
 		<!--#include virtual="menu.shtml" -->
-		<div id="body">	
-			<h2>Quellen</h2>
-			<ul>
-				<li>Idee zu diesem Projekt von <a href="http://world.std.com/~reinhold/diceware.html">The Diceware Passphrase</a></li>
-				<li><a href="diceware_german.txt">Deutsche Wortliste</a> von Benjamin Tenne unter der <a href="http://www.gnu.org/licenses/">GPL</a></li>
-		</div>
-		<!--#include virtual="footer.html" -->
+		<!--#include virtual="include-body.shtml" -->
+		<!--#include virtual="footer.shtml" -->
 	</body>
 </html>
