@@ -1,0 +1,13 @@
+Requirements:
+The webserver needs to have SSI functionality enabled.
+
+
+How to deploy:
+git merge master deploy
+git archive deploy -o webspace.tar
+rm -r webspace/
+
+mkdir webspace
+cd webspace
+tar -xf ../webspace.tar
+copy the webpsace folder to your webserver.
