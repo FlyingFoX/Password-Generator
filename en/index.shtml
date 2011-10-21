@@ -1,0 +1,9 @@
+
+		<div id="body">
+			<p id="about">This Password Generator helps you to create secure and easy to remember passwords. To achieve this all generated passwords consist of several easy words or short character combinations. A typical password could look like this:
+			<pre>
+dog 36 either
+</pre>
+			</p>
+			<a href="password.shtml<!--#echo var="lang_extension" -->" class="button" id="generate-password">Create password</a>
+		</div>

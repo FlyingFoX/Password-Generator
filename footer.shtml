@@ -1,7 +1,7 @@
 <div id="footer">
 	- <a href="https://github.com/FlyingFoX/Password-Generator" target="_blank"><!--#echo var="source_code" --></a> - 
 	<a href="http://flattr.com/thing/416857/FlyingFoX%60-Passwort-Generator" target="_blank">
-		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="<!--#echo var="donate_to_author" -->" title="Spende an den Autor" border="0" /></a> - 
-	<a href="impressum.shtml">Impressum</a> - 
+		<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="<!--#echo var="donate_to_author" -->" title="<!--#echo var="donate_to_author" -->" border="0" /></a> - 
+	<a href="impressum.shtml<!--#echo var="lang_extension" -->">Impressum</a> - 
 	<!--[if IE]>This page is best viewed with a webbrowser. <a href="http://www.getfirefox.com">Get one today!</a><![endif]-->
 </div>

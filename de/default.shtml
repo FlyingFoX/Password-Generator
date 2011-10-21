@@ -11,3 +11,4 @@
 <!--#set var="new_password" value="Neues Passwort erstellen" -->
 <!--#set var="security" value="Sicherheit" -->
 <!--#set var="credits" value="Quellen" -->
+<!--#set var="change_language_to" value="Sprache" -->

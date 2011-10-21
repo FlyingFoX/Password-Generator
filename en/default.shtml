@@ -1,0 +1,14 @@
+<!-- header -->
+<!--#set var="title" value="FlyingFoX&#8217; Password Generator" -->
+
+<!-- footer -->
+<!--#set var="impressum" value="Legal" -->
+<!--#set var="source_code" value="Source code" -->
+<!--#set var="donate_to_author" value="Donate to the author" -->
+
+<!-- menu -->
+<!--#set var="home" value="Home" -->
+<!--#set var="new_password" value="Get new Password" -->
+<!--#set var="security" value="Security" -->
+<!--#set var="credits" value="Credits" -->
+<!--#set var="change_language_to" value="Language" -->
