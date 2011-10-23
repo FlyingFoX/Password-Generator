@@ -4,4 +4,5 @@
 			<ul>
 				<li>Idea to this project by<a href="http://world.std.com/~reinhold/diceware.html">The Diceware Passphrase</a></li>
 				<li><a href="diceware_german.txt">German wordlist</a> by Benjamin Tenne under the <a href="http://www.gnu.org/licenses/">GPL</a></li>
+				<li><a href="beale.wordlist.asc">English wordlist</a> by Alan Beale</li>
 		</div>

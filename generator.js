@@ -1,6 +1,15 @@
 var password_hash = {};
 var hash_ready = false;
-jQuery.getJSON("diceware_german_hash.json", function(password_data){
+var diceware_hash = "diceware_german_hash.json";
+switch ( language ){
+	case "de":
+		diceware_hash = "diceware_german_hash.json";
+		break;
+	case "en":
+		diceware_hash = "beale.wordlist_english.json";
+		break;
+}
+jQuery.getJSON(diceware_hash, function(password_data){
 	password_hash = password_data;
 	hash_ready = true;
 	set_password( find_password() );
