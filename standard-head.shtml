@@ -8,8 +8,8 @@
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" >
 		<meta name="author" content="Matthias Fritsche">
 		<meta name="description" lang="de" content="Mit diesem Passwort Generator können Sie einfach merkbare und sichere Passwört erstellen.">
-+		<meta name="description" lang="en" content="This Password Generator helps to create easy to remember and secure passwords.">
-+		<meta name="keywords" lang="en" content="password, create, generate, method, kryptographic, secure, easy, remember">
+		<meta name="description" lang="en" content="This Password Generator helps to create easy to remember and secure passwords.">
+		<meta name="keywords" lang="en" content="password, create, generate, method, kryptographic, secure, easy, remember">
 		<meta name="keywords" lang="de" content="Passwort, erstellen, generieren, methode, kryptograpisch, sicher, einfach, merkbar">
 		<meta http-equiv="content-language" content="<!--#echo var="lang" -->">
 		<title><!--#echo var="title" --></title>
