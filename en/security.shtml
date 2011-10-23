@@ -141,7 +141,7 @@
 				<p>Alternativly you can have a look at the source code of this page and check how the password creation works.</p>
 				<p>Or you could create your password manually. This works the following way:</p>
 				<ol>
-					<li>Download the word list <a href="diceware_german.txt">here</a>.<span class="more how"> Right clik to <q>here</q> and then <q>Save target as</q></span></li>
+					<li>Download the word list <a href="<!--#echo var="diceware_txt" -->">here</a>.<span class="more how"> Right clik to <q>here</q> and then <q>Save target as</q></span></li>
 					<li>Roll the dice 5 times and write the rolled numbers down.</li>
 					<li>Open the downloaded file with Notepad or Wordpad or another text editor.</li>
 					<li>Search for the number you just rolled in the downloaded file.</li>

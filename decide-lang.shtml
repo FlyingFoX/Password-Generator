@@ -1,7 +1,13 @@
 
-		<!--#if expr="${QUERY_STRING} = /lang=([a-zA-Z]{2})/" -->
+		<!--#if expr="${QUERY_STRING} = /lang=([a-zA-Z]{2})/ && ( ${1} == en || ${1} == de )" -->
 			<!--#set var="lang" value="$1" -->
 			<!--#set var="lang_extension" value="?lang=$1" -->
+			<!--#if expr="${1} == en" -->
+				<!--#set var="diceware_txt" value="beale.wordlist.asc" -->
+			<!--#endif -->
+			<!--#if expr="${1} == de" -->
+				<!--#set var="diceware_txt" value="diceware_german.txt" -->
+			<!--#endif -->
 		<!--#else -->
 			<!--#set var="lang" value="de" -->
 			<!--#set var="lang_extension" value="" -->
