@@ -141,7 +141,7 @@
 				<p>Alternativ können Sie sich auch den Quellcode dieser Seite ansehen und nachvollziehen wie die Passworterstellung funktioniert.</p>
 				<p>Sie können sich Ihr Passwort auch per Hand erstellen. Das geht so:</p>
 				<ol>
-					<li>Die Wörterdatei von <a href=<!--#echo var="diceware_txt" -->>hier</a> herunterladen.<span class="more how"> Rechtsklick auf <q>hier</q> und dann <q>Ziel speichern unter</q></span></li>
+					<li>Die Wörterdatei von <a href="<!--#echo var="diceware_txt" -->">hier</a> herunterladen.<span class="more how"> Rechtsklick auf <q>hier</q> und dann <q>Ziel speichern unter</q></span></li>
 					<li>Würfeln Sie 5 mal hintereinander und schreiben Sie sich die gewürfelten Zahlen auf.</li>
 					<li>Öffnen Sie die heruntergeladene Datei mit Notepad oder Wordpad oder einem anderen Texteditor.</li>
 					<li>Suchen Sie in der heruntergeladenen Wörterdatei nach der erwürfelten Zahlenkombination.</li>

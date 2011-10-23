@@ -10,5 +10,6 @@
 			<!--#endif -->
 		<!--#else -->
 			<!--#set var="lang" value="de" -->
+			<!--#set var="diceware_txt" value="diceware_german.txt" -->
 			<!--#set var="lang_extension" value="" -->
 		<!--#endif -->
