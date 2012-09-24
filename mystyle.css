@@ -142,6 +142,10 @@
 {
 	background-color:#A5FF4B;
 }
+.question {
+    background-color: rgb(234, 244, 252);
+    font-style: italic;
+}
 
 /* language specific stuff */
 :lang(de)
