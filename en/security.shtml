@@ -1,10 +1,9 @@
-
 		<div id="body">
 			<div class="question">
 				<p>Why do I have to roll dice for a new password?</p>
 			</div>
 			<div class="answer">
-				<p>Rolling dice makes the creation of random data transparent for you. To make sure, thate the random data is goot enough, you only have to check if the dice has all numbers from 1 to 6 and is shaped like a cube. <span class="more">To check the quality of random data that is created by an algorithm you need to not only be able to program to read the algorithm, but have very good mathematical knowledge as well. <span class="more">Another advantage of rolling dice is that it decentralizes the creation of random data whereas an algorithm centralizes that. This means that a not random dice only allows cracking of the password of very few users using that dice, but a bad algorithm potentially allows the cracking of millions of passwords. See the <a href="http://lists.debian.org/debian-security-announce/2008/msg00152.html">Debian OpenSSL Security Bug</a> for reference.</span></span></p>
+				<p>Rolling dice makes the creation of random data transparent for you. To make sure, thate the random data is good enough, you only have to check if the dice has all numbers from 1 to 6 and is shaped like a cube. <span class="more">To check the quality of random data that is created by an algorithm you need to not only be able to program to read the algorithm, but have very good mathematical knowledge as well. <span class="more">Another advantage of rolling dice is that it decentralizes the creation of random data whereas an algorithm centralizes that. This means that a not random dice only allows cracking of the password of very few users using that dice, but a bad algorithm potentially allows the cracking of millions of passwords. See the <a href="http://lists.debian.org/debian-security-announce/2008/msg00152.html">Debian OpenSSL Security Bug</a> for reference.</span></span></p>
 			</div>
 			<div class="question">
 				<p>How hard is it to crack my password?</p>
@@ -129,7 +128,7 @@
 			<div class="answer">
 				<p>That is true. I vow to not try to steal your passwords with this website. Moreover the webserver does not know the created password at any point in time, because all neccessary computations are done with javascript in your browser. To make sure that this really is the case you can do the following: </p>
 				<ol>
-					<li>Change to private browsing mode<span class="more why"> to make sure that after closing this website no dta is saved.</span></li>
+					<li>Change to private browsing mode<span class="more why"> to make sure that after closing this website no data is saved.</span></li>
 					<li>Open this website.</li>
 					<li>Navigate to <q>Get new Password</q></li>
 					<li>Change to offline mode pull out your network cable if your browser doesn't have an offline mode.<span class="more why">This ensures that now no data can be transferred from you to the server or from the server to you.</span></li>
