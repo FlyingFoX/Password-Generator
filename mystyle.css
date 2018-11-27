@@ -156,3 +156,15 @@
 {
   quotes:"\201C" "\201D" "\2018" "\2019";
 }
+
+/* animations */
+@keyframes highlight-frames {
+    from {background-color: yellow;}
+    to {background-color: none;}
+}
+
+.highlight {
+    animation-name: highlight-frames;
+    animation-duration: 4s;
+}
+

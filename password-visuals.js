@@ -39,15 +39,24 @@ function adjustSecurity() {
     if ( security_input.value === "low" ) {
       hide(ui.usability_security_high);
       show(ui.usability_security_low);
-      $("#usability-security-low").effect("highlight", {}, duration);
+      highlight(ui.usability_security_low);
     } else if ( security_input.value === "high" ) {
       hide(ui.usability_security_low);
       show(ui.usability_security_high);
-      $("#usability-security-high").effect("highlight", {}, duration);
+      highlight(ui.usability_security_high);
     }
   } else {
     //nothing is already shown, don't change what is shown
   }
+}
+
+function highlight(element){
+  element.classList.add("highlight");
+  // remove the highlighter class again once the animation has finished
+  // TODO read the actual animation time here
+  setTimeout(function(){
+    element.classList.remove("highlight");
+  }, 4000);
 }
 
 function set_needed_dice(dice){
@@ -101,7 +110,7 @@ function set_password(password){
     pw_input.value = password;
     // only highlight if the password changed
     if (oldpassword != password ){
-      $("#newpassword").show("highlight", {}, 2000);
+      highlight(document.getElementById("newpassword"));
     }
   }else{
     pw_input.value = "";
