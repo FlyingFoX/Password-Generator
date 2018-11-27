@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', function(){
     document.querySelectorAll("#security-form input").forEach(function(element){
         element.onchange = adjustSecurity;
     });
+    document.getElementById("dice-thrown").onchange = setProgress;
 });
 $(document).ready(function() {
   // things that need to be done when DOM is ready.
   $(":button, .button").button();
   $("#dice-thrown").bind("keyup", setProgress);
-  $("#dice-thrown").change(setProgress);
   reset();
 });
 function toggleInfo(){
