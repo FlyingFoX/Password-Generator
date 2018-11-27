@@ -27,19 +27,20 @@ function toggleInfo(){
 }
 
 function adjustSecurity() {
-  if ($(":checked[name='security']").val() == "low" ){
+  var security_input = document.querySelector(":checked[name='security']");
+  if (security_input.value == "low" ){
     set_needed_dice(15);
-  }else if( $(":checked[name='security']").val() == "high" ){
+  }else if(security_input.value == "high" ){
     set_needed_dice(25);
   }
   if ( security_info_visible ){
     //something is already shown
     var duration = "slow";
-    if ( $(":checked[name='security']").val() == "low" ) {
+    if ( security_input.value == "low" ) {
       hideById("usability-security-high");
       showById("usability-security-low");
       $("#usability-security-low").effect("highlight", {}, duration);
-    } else if ( $(":checked[name='security']").val() == "high" ) {
+    } else if ( security_input.value == "high" ) {
       hideById("usability-security-low");
       showById("usability-security-high");
       $("#usability-security-high").effect("highlight", {}, duration);
@@ -51,13 +52,13 @@ function adjustSecurity() {
 
 function set_needed_dice(dice){
   NEEDED_DICE = dice;
-  $("#needed").val(NEEDED_DICE);
+  document.getElementById("needed").value = NEEDED_DICE;
   $("#dice-thrown").attr("maxlength", dice);
 }
 
 function reset(){
-  $("#dice-thrown").val("");
-  $("#newpassword input").val("");
+  document.getElementById("dice-thrown").value = "";
+  document.getElementById("newpassword input").value = "";
   $(".LCD").removeClass("finished");
   set_needed_dice(NEEDED_DICE);
   setProgress();
@@ -88,22 +89,23 @@ function showById(id){
 }
 
 function set_password(password){
+  var pw_input = document.querySelector("#newpassword input");
   // only set the password if it is valid and non empty
   if (check_password(password)
       && password != "" && password != null ){
-    var oldpassword = $("#newpassword input").val();
-    $("#newpassword input").val(password);
+    var oldpassword = pw_input.value;
+    pw_input.value = password;
     // only highlight if the password changed
     if (oldpassword != password ){
       $("#newpassword").show("highlight", {}, 2000);
     }
   }else{
-    $("#newpassword input").val("");
+    pw_input.value = "";
   }
 }
 
 function validate_dice_thrown(){
-  var dice = $("#dice-thrown").val();
+  var dice = document.getElementById("dice-thrown").value;
   var one_to_six = /^[1-6]*$/;
   var result = one_to_six.test(dice);
   if (!result){
@@ -113,8 +115,9 @@ function validate_dice_thrown(){
 }
 
 function setProgress(event){
-  var progress = $("#dice-thrown").val().length;
-  $("#thrown").val(progress);
+  var dice_thrown = document.getElementById("dice-thrown");
+  var progress = dice_thrown.value.length;
+  document.getElementById("thrown").value = progress;
   // don't do any validation when backspace was pressed.
   if ( event != null && event.which == 8){
     $(".LCD").removeClass("finished");
@@ -125,7 +128,7 @@ function setProgress(event){
     if (valid && progress == NEEDED_DICE ){
       $(".LCD").addClass("finished");
       input_ready = true;
-      set_password( find_password($("#dice-thrown").val()) );
+      set_password( find_password(dice_thrown.value) );
     }
   }
 }
