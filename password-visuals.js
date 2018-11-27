@@ -11,10 +11,6 @@ document.addEventListener('DOMContentLoaded', function(){
     var dice_thrown = document.getElementById("dice-thrown");
     dice_thrown.onchange = setProgress;
     dice_thrown.onkeyup = setProgress;
-});
-$(document).ready(function() {
-  // things that need to be done when DOM is ready.
-  $(":button, .button").button();
   reset();
 });
 function toggleInfo(){
