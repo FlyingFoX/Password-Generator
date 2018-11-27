@@ -4,11 +4,11 @@ var security_info_visible = false;
 document.addEventListener('DOMContentLoaded', function(){
     document.querySelector("#security-info").onclick = toggleInfo;
     document.querySelector("#reset").onclick = reset;
+    document.querySelectorAll(".dialog").forEach(hide);
 });
 $(document).ready(function() {
 	// things that need to be done when DOM is ready.
 	$(":button, .button").button();
-	$(".dialog").hide();
 	$("#security-form input").change(adjustSecurity);
 	$("#dice-thrown").bind("keyup", setProgress);
 	$("#dice-thrown").change(setProgress);
@@ -75,7 +75,9 @@ function check_password(password){
 	}
 	return true;
 }
-
+function hide(element){
+    element.style.display = "none";
+}
 function set_password(password){
 	// only set the password if it is valid and non empty
 	if (check_password(password) 
