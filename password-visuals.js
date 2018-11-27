@@ -28,19 +28,19 @@ function toggleInfo(){
 
 function adjustSecurity() {
   var security_input = document.querySelector(":checked[name='security']");
-  if (security_input.value == "low" ){
+  if (security_input.value === "low" ){
     set_needed_dice(15);
-  }else if(security_input.value == "high" ){
+  }else if(security_input.value === "high" ){
     set_needed_dice(25);
   }
   if ( security_info_visible ){
     //something is already shown
     var duration = "slow";
-    if ( security_input.value == "low" ) {
+    if ( security_input.value === "low" ) {
       hide(ui.usability_security_high);
       show(ui.usability_security_low);
       $("#usability-security-low").effect("highlight", {}, duration);
-    } else if ( security_input.value == "high" ) {
+    } else if ( security_input.value === "high" ) {
       hide(ui.usability_security_low);
       show(ui.usability_security_high);
       $("#usability-security-high").effect("highlight", {}, duration);
@@ -122,13 +122,13 @@ function setProgress(event){
   var progress = ui.dice_thrown.value.length;
   document.getElementById("thrown").value = progress;
   // don't do any validation when backspace was pressed.
-  if ( event != null && event.which == 8){
+  if ( event != null && event.which === 8){
     ui.removeLCDfinished();
     input_ready = false;
     return;
   }else {
     var valid = validate_dice_thrown();
-    if (valid && progress == NEEDED_DICE ){
+    if (valid && progress === NEEDED_DICE ){
       ui.setLCDfinished();
       input_ready = true;
       set_password( find_password(ui.dice_thrown.value) );
