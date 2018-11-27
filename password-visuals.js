@@ -58,7 +58,7 @@ function set_needed_dice(dice){
 
 function reset(){
   document.getElementById("dice-thrown").value = "";
-  document.getElementById("newpassword input").value = "";
+  document.querySelector("#newpassword input").value = "";
   $(".LCD").removeClass("finished");
   set_needed_dice(NEEDED_DICE);
   setProgress();
