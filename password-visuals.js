@@ -2,17 +2,18 @@ var input_ready = false;
 var NEEDED_DICE = 15;
 var security_info_visible = false;
 document.addEventListener('DOMContentLoaded', function(){
-    document.querySelector("#security-info").onclick = toggleInfo;
-    document.querySelector("#reset").onclick = reset;
-    document.querySelectorAll(".dialog").forEach(hide);
-    document.querySelectorAll("#security-form input").forEach(function(element){
-        element.onchange = adjustSecurity;
-    });
-    var dice_thrown = document.getElementById("dice-thrown");
-    dice_thrown.onchange = setProgress;
-    dice_thrown.onkeyup = setProgress;
+  document.querySelector("#security-info").onclick = toggleInfo;
+  document.querySelector("#reset").onclick = reset;
+  document.querySelectorAll(".dialog").forEach(hide);
+  document.querySelectorAll("#security-form input").forEach(function(element){
+    element.onchange = adjustSecurity;
+  });
+  var dice_thrown = document.getElementById("dice-thrown");
+  dice_thrown.onchange = setProgress;
+  dice_thrown.onkeyup = setProgress;
   reset();
 });
+
 function toggleInfo(){
   console.log("toggleInfo: called");
   if ( security_info_visible ) {
@@ -53,6 +54,7 @@ function set_needed_dice(dice){
   $("#needed").val(NEEDED_DICE);
   $("#dice-thrown").attr("maxlength", dice);
 }
+
 function reset(){
   $("#dice-thrown").val("");
   $("#newpassword input").val("");
@@ -72,15 +74,19 @@ function check_password(password){
   }
   return true;
 }
+
 function hide(element){
-    element.style.display = "none";
+  element.style.display = "none";
 }
+
 function hideById(id){
-    hide(document.getElementById(id));
+  hide(document.getElementById(id));
 }
+
 function showById(id){
-    document.getElementById(id).style.display = "inline-block";
+  document.getElementById(id).style.display = "inline-block";
 }
+
 function set_password(password){
   // only set the password if it is valid and non empty
   if (check_password(password)
