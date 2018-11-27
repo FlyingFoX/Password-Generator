@@ -5,15 +5,17 @@ document.addEventListener('DOMContentLoaded', function(){
     document.querySelector("#security-info").onclick = toggleInfo;
     document.querySelector("#reset").onclick = reset;
     document.querySelectorAll(".dialog").forEach(hide);
+    document.querySelectorAll("#security-form input").forEach(function(element){
+        element.onchange = adjustSecurity;
+    });
 });
 $(document).ready(function() {
   // things that need to be done when DOM is ready.
   $(":button, .button").button();
-  $("#security-form input").change(adjustSecurity);
   $("#dice-thrown").bind("keyup", setProgress);
   $("#dice-thrown").change(setProgress);
   reset();
-}) ;
+});
 function toggleInfo(){
   console.log("toggleInfo: called");
   if ( security_info_visible ) {
