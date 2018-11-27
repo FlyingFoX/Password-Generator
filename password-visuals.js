@@ -59,7 +59,7 @@ function set_needed_dice(dice){
 function reset(){
   ui.dice_thrown.value = "";
   document.querySelector("#newpassword input").value = "";
-  $(".LCD").removeClass("finished");
+  ui.removeLCDfinished();
   set_needed_dice(NEEDED_DICE);
   setProgress();
 }
@@ -123,13 +123,13 @@ function setProgress(event){
   document.getElementById("thrown").value = progress;
   // don't do any validation when backspace was pressed.
   if ( event != null && event.which == 8){
-    $(".LCD").removeClass("finished");
+    ui.removeLCDfinished();
     input_ready = false;
     return;
   }else {
     var valid = validate_dice_thrown();
     if (valid && progress == NEEDED_DICE ){
-      $(".LCD").addClass("finished");
+      ui.setLCDfinished();
       input_ready = true;
       set_password( find_password(ui.dice_thrown.value) );
     }
@@ -147,3 +147,17 @@ function UI(){
   this.usability_security_high = document.getElementById("usability-security-high");
   this.wrong_text = document.getElementById("wrong-text");
 }
+UI.prototype.getLCDs = function(){return document.querySelectorAll(".LCD");};
+UI.prototype.getNewPasswordInput = function(){return document.querySelector("#newpassword input");};
+UI.prototype.setLCDfinished = function(){
+  this.getLCDs().forEach(
+    function(element){
+      element.classList.add("finished");
+    });
+};
+UI.prototype.removeLCDfinished = function(){
+  this.getLCDs().forEach(
+    function(element){
+      element.classList.remove("finished");
+    });
+};
