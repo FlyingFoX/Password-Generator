@@ -2,15 +2,15 @@ var input_ready = false;
 var NEEDED_DICE = 15;
 var security_info_visible = false;
 document.addEventListener('DOMContentLoaded', function(){
-  document.querySelector("#security-info").onclick = toggleInfo;
-  document.querySelector("#reset").onclick = reset;
+  ui = new UI();
+  ui.security_info.onclick = toggleInfo;
+  ui.reset.onclick = reset;
   document.querySelectorAll(".dialog").forEach(hide);
   document.querySelectorAll("#security-form input").forEach(function(element){
     element.onchange = adjustSecurity;
   });
-  var dice_thrown = document.getElementById("dice-thrown");
-  dice_thrown.onchange = setProgress;
-  dice_thrown.onkeyup = setProgress;
+  ui.dice_thrown.onchange = setProgress;
+  ui.dice_thrown.onkeyup = setProgress;
   reset();
 });
 
@@ -18,8 +18,8 @@ function toggleInfo(){
   console.log("toggleInfo: called");
   if ( security_info_visible ) {
     security_info_visible = false;
-    hideById("usability-security-low");
-    hideById("usability-security-high");
+    hide(ui.usability_security_low);
+    hide(ui.usability_security_high);
   } else{
     security_info_visible = true;
     adjustSecurity();
@@ -37,12 +37,12 @@ function adjustSecurity() {
     //something is already shown
     var duration = "slow";
     if ( security_input.value == "low" ) {
-      hideById("usability-security-high");
-      showById("usability-security-low");
+      hide(ui.usability_security_high);
+      show(ui.usability_security_low);
       $("#usability-security-low").effect("highlight", {}, duration);
     } else if ( security_input.value == "high" ) {
-      hideById("usability-security-low");
-      showById("usability-security-high");
+      hide(ui.usability_security_low);
+      show(ui.usability_security_high);
       $("#usability-security-high").effect("highlight", {}, duration);
     }
   } else {
@@ -52,12 +52,12 @@ function adjustSecurity() {
 
 function set_needed_dice(dice){
   NEEDED_DICE = dice;
-  document.getElementById("needed").value = NEEDED_DICE;
+  ui.dice_needed.value = NEEDED_DICE;
   $("#dice-thrown").attr("maxlength", dice);
 }
 
 function reset(){
-  document.getElementById("dice-thrown").value = "";
+  ui.dice_thrown.value = "";
   document.querySelector("#newpassword input").value = "";
   $(".LCD").removeClass("finished");
   set_needed_dice(NEEDED_DICE);
@@ -84,8 +84,12 @@ function hideById(id){
   hide(document.getElementById(id));
 }
 
+function show(element){
+  element.style.display = "inline-block";
+}
+
 function showById(id){
-  document.getElementById(id).style.display = "inline-block";
+  show(document.getElementById(id));
 }
 
 function set_password(password){
@@ -105,7 +109,7 @@ function set_password(password){
 }
 
 function validate_dice_thrown(){
-  var dice = document.getElementById("dice-thrown").value;
+  var dice = ui.dice_thrown.value;
   var one_to_six = /^[1-6]*$/;
   var result = one_to_six.test(dice);
   if (!result){
@@ -115,8 +119,7 @@ function validate_dice_thrown(){
 }
 
 function setProgress(event){
-  var dice_thrown = document.getElementById("dice-thrown");
-  var progress = dice_thrown.value.length;
+  var progress = ui.dice_thrown.value.length;
   document.getElementById("thrown").value = progress;
   // don't do any validation when backspace was pressed.
   if ( event != null && event.which == 8){
@@ -128,7 +131,19 @@ function setProgress(event){
     if (valid && progress == NEEDED_DICE ){
       $(".LCD").addClass("finished");
       input_ready = true;
-      set_password( find_password(dice_thrown.value) );
+      set_password( find_password(ui.dice_thrown.value) );
     }
   }
+}
+
+function UI(){
+  this.dice_thrown = document.getElementById("dice-thrown");
+  this.security_info = document.getElementById("security-info");
+  this.reset = document.getElementById("reset");
+  this.dice_needed = document.getElementById("needed");
+  // the number of thrown dice
+  this.thrown_lcd = document.getElementById("thrown");
+  this.usability_security_low = document.getElementById("usability-security-low");
+  this.usability_security_high = document.getElementById("usability-security-high");
+  this.wrong_text = document.getElementById("wrong-text");
 }
