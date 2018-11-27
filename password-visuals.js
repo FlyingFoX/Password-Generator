@@ -53,7 +53,7 @@ function adjustSecurity() {
 function set_needed_dice(dice){
   NEEDED_DICE = dice;
   ui.dice_needed.value = NEEDED_DICE;
-  $("#dice-thrown").attr("maxlength", dice);
+  ui.dice_thrown.setAttribute("maxlength", dice);
 }
 
 function reset(){
