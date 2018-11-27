@@ -1,6 +1,9 @@
 var input_ready = false;
 var NEEDED_DICE = 15;
 var security_info_visible = false;
+document.addEventListener('DOMContentLoaded', function(){
+    document.querySelector("#reset").onclick = reset;
+});
 $(document).ready(function() {
 	// things that need to be done when DOM is ready.
 	$(":button, .button").button();
@@ -9,7 +12,6 @@ $(document).ready(function() {
 	$("#security-form input").change(adjustSecurity);
 	$("#dice-thrown").bind("keyup", setProgress);
 	$("#dice-thrown").change(setProgress);
-	$("#reset").click(reset);
 	reset();
 });
 function toggleInfo(){
