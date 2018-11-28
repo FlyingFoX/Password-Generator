@@ -70,7 +70,9 @@
 }
 #header
 {
-  text-align:center;
+  border: 1px solid #aed0ea;
+  background: var(--background-light);
+  text-align: center;
 }
 #header a:link, #header a:hover, #header a:visited
 {
