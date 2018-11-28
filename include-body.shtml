@@ -1,3 +1,5 @@
 
+    <!-- background for modal dialogs -->
+    <div id="modal-background"></div>
 		<!--#include virtual="decide-lang.shtml" -->
 		<!--#include virtual="${lang}/${DOCUMENT_NAME}" -->

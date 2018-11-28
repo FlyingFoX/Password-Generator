@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', function(){
   document.querySelectorAll("#security-form input").forEach(function(element){
     element.onchange = adjustSecurity;
   });
+  ui.modal_background.onclick = ui.closeModalDialogs;
+  document.querySelectorAll(".close").forEach(function(closeButton){
+    closeButton.onclick = ui.closeModalDialogs;
+  });
   ui.dice_thrown.onchange = setProgress;
   ui.dice_thrown.onkeyup = setProgress;
   reset();
@@ -75,10 +79,7 @@ function reset(){
 
 function check_password(password){
   if ( input_ready && Math.pow(26, password.length) < Math.pow(7776, Math.floor(NEEDED_DICE/5))  ){
-    $("#too-short").dialog({
-      position:"center", 
-      buttons: { "OK": function() { $(this).dialog("close"); } }
-    });
+    ui.showTooShortDialog();
     reset();
     return false;
   }
@@ -122,7 +123,7 @@ function validate_dice_thrown(){
   var one_to_six = /^[1-6]*$/;
   var result = one_to_six.test(dice);
   if (!result){
-    $("#wrong-text").dialog();
+    ui.showWrongTextDialog();
   }
   return result;
 }
@@ -155,6 +156,27 @@ function UI(){
   this.usability_security_low = document.getElementById("usability-security-low");
   this.usability_security_high = document.getElementById("usability-security-high");
   this.wrong_text = document.getElementById("wrong-text");
+  this.modal_background = document.getElementById("modal-background");
+  this.modal_dialog_wrong_text = document.getElementById("wrong-text");
+  this.modal_dialog_too_short = document.getElementById("too-short");
+  var modal_background = this.modal_background;
+  var modal_dialog_wrong_text = this.modal_dialog_wrong_text;
+  var modal_dialog_too_short = this.modal_dialog_too_short;
+  this.closeModalDialogs = function(){
+    [
+     modal_background,
+     modal_dialog_too_short,
+     modal_dialog_wrong_text
+    ].forEach(element => element.style.display = "none");
+  };
+  this.showWrongTextDialog = function(){
+    modal_background.style.display = "block";
+    modal_dialog_wrong_text.style.display = "block";
+  };
+  this.showTooShortDialog = function(){
+    modal_background.style.display = "block";
+    modal_dialog_too_short.style.display = "block";
+  };
 }
 UI.prototype.getLCDs = function(){return document.querySelectorAll(".LCD");};
 UI.prototype.getNewPasswordInput = function(){return document.querySelector("#newpassword input");};
