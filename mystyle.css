@@ -36,7 +36,8 @@
 /*	white font	*/
 #menu a:hover,#menu a:active, .button:hover, .button:active
 {
-  color: white;
+  color: var(--foreground-light);
+}
 }
 
 /*	gradient dark background	*/
