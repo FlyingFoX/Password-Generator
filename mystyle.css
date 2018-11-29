@@ -14,7 +14,7 @@
 {
   display:block;
   font-weight:bold;
-  color:#2779AA;
+  color: var(--button-foreground-dark);
   background-color:#E3F1FA;
   width:260px;
   text-align:left;
