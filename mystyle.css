@@ -54,7 +54,8 @@
   font-weight: bold;
   color: #ffffff;
 }
-button {
+button,
+.button {
   border: 1px solid #aed0ea;
   background: var(--background-light);
   font-weight: bold;
@@ -68,8 +69,8 @@ button {
   text-align: center;
   overflow: visible;
   line-height: 1.4;
+  text-decoration: none;
 }
-
 button:hover,
 #menu a:hover,
 #menu a:active,
@@ -80,6 +81,12 @@ button:active {
 	background: #e4f1fb;
 	font-weight: bold;
 	color: #0070a3;
+}
+
+/* explicitly set font for everything, because otherwise they might differ */
+body, input, button, select, option, textarea, a {
+  font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+  font-size: 1em;
 }
 
 /*	all corners round	*/
