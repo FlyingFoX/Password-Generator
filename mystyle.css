@@ -2,6 +2,7 @@
   --button-foreground-dark: #2779AA;
   --foreground-light: #fff;
   --background-light: #E3F1FA;
+  --button-border-light: #aed0ea;
 }
 #menu
 {
@@ -48,15 +49,17 @@
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active,
-#menu li a.ui-state-active {
+#menu li a.ui-state-active,
+input.button:checked + label {
   border: 1px solid #2694e8;
   background: #3baae3;
   font-weight: bold;
   color: #ffffff;
 }
 button,
-.button {
-  border: 1px solid #aed0ea;
+.button,
+input.button + label {
+  border: 1px solid var(--button-border-light);
   background: var(--background-light);
   font-weight: bold;
   color: var(--button-foreground-dark);
@@ -76,11 +79,17 @@ button:hover,
 #menu a:active,
 .button:hover,
 .button:active,
-button:active {
+button:active,
+input.button:not(:checked) + label:hover {
 	border: 1px solid #74b2e2;
 	background: #e4f1fb;
 	font-weight: bold;
 	color: #0070a3;
+}
+
+/* hide radio input symbols */
+input.button:empty {
+  margin-left: -9999px;
 }
 
 /* explicitly set font for everything, because otherwise they might differ */
