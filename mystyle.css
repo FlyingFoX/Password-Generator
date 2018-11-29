@@ -45,7 +45,10 @@
   color: var(--button-foreground-dark);
   text-decoration: none;
 }
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+#menu li a.ui-state-active {
   border: 1px solid #2694e8;
   background: #3baae3;
   font-weight: bold;
