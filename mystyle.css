@@ -89,7 +89,7 @@ input.button:not(:checked) + label:hover {
 
 /* hide radio input symbols */
 input.button:empty {
-  margin-left: -9999px;
+  display: none;
 }
 
 /* explicitly set font for everything, because otherwise they might differ */
@@ -203,7 +203,7 @@ body, input, button, select, option, textarea, a {
 /* mainly for password.html */
 #security-form input, #security-form label, #security-form .ui-icon
 {
-  float: left;
+  /* float: left; */
 }
 #security-form .ui-icon
 {
