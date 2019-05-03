@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function(){
   });
   ui.dice_thrown.onchange = setProgress;
   ui.dice_thrown.onkeyup = setProgress;
+  adjustSecurity();
   reset();
 });
 
