@@ -141,6 +141,7 @@ function setProgress(event){
   if ( event != null && event.which === 8){
     ui.removeLCDfinished();
     input_ready = false;
+    ui.new_password_input.value = "";
     return;
   }else {
     var valid = validate_dice_thrown();
@@ -150,6 +151,7 @@ function setProgress(event){
       set_password( find_password(ui.dice_thrown.value) );
     }
     else {
+      ui.new_password_input.value = "";
       ui.removeLCDfinished();
     }
   }
