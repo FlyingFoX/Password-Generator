@@ -77,7 +77,7 @@ function set_needed_dice(dice){
 
 function reset(){
   ui.dice_thrown.value = "";
-  document.querySelector("#newpassword input").value = "";
+  ui.new_password_input.value = "";
   ui.removeLCDfinished();
   set_needed_dice(NEEDED_DICE);
   setProgress();
@@ -109,7 +109,7 @@ function showById(id){
 }
 
 function set_password(password){
-  var pw_input = document.querySelector("#newpassword input");
+  var pw_input = ui.new_password_input;
   // only set the password if it is valid and non empty
   if (check_password(password)
       && password != "" && password != null ){
@@ -168,6 +168,7 @@ function UI(){
   this.modal_background = document.getElementById("modal-background");
   this.modal_dialog_wrong_text = document.getElementById("wrong-text");
   this.modal_dialog_too_short = document.getElementById("too-short");
+  this.new_password_input = document.querySelector("#newpassword input");
   var modal_background = this.modal_background;
   var modal_dialog_wrong_text = this.modal_dialog_wrong_text;
   var modal_dialog_too_short = this.modal_dialog_too_short;
@@ -188,7 +189,6 @@ function UI(){
   };
 }
 UI.prototype.getLCDs = function(){return document.querySelectorAll(".LCD");};
-UI.prototype.getNewPasswordInput = function(){return document.querySelector("#newpassword input");};
 UI.prototype.setLCDfinished = function(){
   this.getLCDs().forEach(
     function(element){
