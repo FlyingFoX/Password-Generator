@@ -98,6 +98,12 @@ body, input, button, select, option, textarea, a {
   font-size: 1em;
 }
 
+/* adjust input field width to be able to show 25 dice elements */
+#newpassword input, #dice-thrown
+{
+  width: 350px;
+}
+
 /*	all corners round	*/
 #menu a, .button, .dialog, #header
 {
