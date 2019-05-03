@@ -1,22 +1,22 @@
 <ul id="menu">
 	<li ><a href="index.shtml<!--#echo var="lang_extension" -->" 
-		<!--#if expr="${DOCUMENT_NAME} == 'index.shtml'" -->
+		<!--#if expr="v('DOCUMENT_NAME') == 'index.shtml'" -->
 		class="ui-state-active ui-state-default"
 		<!--#endif -->
 		><!--#echo var="home" -->
 		</a></li>
 	<li ><a href="password.shtml<!--#echo var="lang_extension" -->"
-		<!--#if expr="${DOCUMENT_NAME} == 'password.shtml'" -->
+		<!--#if expr="v('DOCUMENT_NAME') == 'password.shtml'" -->
 		class="ui-state-active ui-state-default"
 		<!--#endif -->
 		><!--#echo var="new_password" --></a></li>
 	<li><a href="security.shtml<!--#echo var="lang_extension" -->"
-		<!--#if expr="${DOCUMENT_NAME} == 'security.shtml'" -->
+		<!--#if expr="v('DOCUMENT_NAME') == 'security.shtml'" -->
 		class="ui-state-active ui-state-default"
 		<!--#endif -->
 		><!--#echo var="security" --></a></li>
 	<li><a href="credits.shtml<!--#echo var="lang_extension" -->"
-		<!--#if expr="${DOCUMENT_NAME} == 'credits.shtml'" -->
+		<!--#if expr="v('DOCUMENT_NAME') == 'credits.shtml'" -->
 		class="ui-state-active ui-state-default"
 		<!--#endif -->
 		><!--#echo var="credits" --></a></li>
