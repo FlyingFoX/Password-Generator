@@ -64,9 +64,15 @@ function highlight(element){
 }
 
 function set_needed_dice(dice){
-  NEEDED_DICE = dice;
-  ui.dice_needed.value = NEEDED_DICE;
-  ui.dice_thrown.setAttribute("maxlength", dice);
+  if (NEEDED_DICE != dice){
+    NEEDED_DICE = dice;
+    ui.dice_needed.value = NEEDED_DICE;
+    ui.dice_thrown.setAttribute("maxlength", dice);
+    // trim the dice to the new available length
+    ui.dice_thrown.value = ui.dice_thrown.value.substr(0, dice);
+    ui.thrown_lcd.value = ui.dice_thrown.value.length;
+    setProgress();
+  }
 }
 
 function reset(){
@@ -142,6 +148,9 @@ function setProgress(event){
       ui.setLCDfinished();
       input_ready = true;
       set_password( find_password(ui.dice_thrown.value) );
+    }
+    else {
+      ui.removeLCDfinished();
     }
   }
 }
