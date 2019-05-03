@@ -87,6 +87,13 @@ input.button:not(:checked) + label:hover {
   color: #0070a3;
 }
 
+/* adjust height for reset button to fit with LCD height */
+#reset
+{
+  height: 32px;
+  padding: 0em 1em;
+}
+
 /* hide radio input symbols */
 input.button:empty {
   display: none;
